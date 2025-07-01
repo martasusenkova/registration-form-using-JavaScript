@@ -10,6 +10,7 @@ window.addEventListener("DOMContentLoaded", function () {
   const user = localStorage.getItem("user");
 
   // Проверяем, залогинен ли пользователь при загрузке
+
   if (user) {
     const parsedUser = JSON.parse(user);
     welcomeEl.innerHTML = `Hello, ${parsedUser.name}`;
@@ -101,3 +102,12 @@ window.addEventListener("DOMContentLoaded", function () {
     btnPopup.style.display = "inline-block";
   });
 });
+const rememberMe = document.querySelector(".login .remember-forgot input");
+
+if (rememberMe.checked) {
+  localStorage.setItem("user", JSON.stringify(savedUser));
+} else {
+  sessionStorage.setItem("user", JSON.stringify(savedUser));
+}
+
+const user = localStorage.getItem("user") || sessionStorage.getItem("user");
