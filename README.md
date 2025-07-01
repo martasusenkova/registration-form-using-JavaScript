@@ -17,7 +17,8 @@ It uses **localStorage** to save and manage user data directly in the browser.
 
 ### 🖼 Preview
 
-## <img src="screen1.png" width="300"><img src="screen2.png" width="300">
+## <img src="screen2.png" width="300">
+<img src="screen1.png" width="300">
 
 ### 🛠 Technologies Used
 
